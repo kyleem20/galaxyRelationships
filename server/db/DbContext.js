@@ -1,9 +1,10 @@
 import mongoose from 'mongoose'
 import { AccountSchema, ProfileSchema } from '../models/Account'
-import { ValueSchema } from '../models/Value'
+import { PlanetSchema } from '../models/Planet'
 
 class DbContext {
-  Values = mongoose.model('Value', ValueSchema);
+  Planets = mongoose.model('Planet', PlanetSchema);
+
   Account = mongoose.model('Account', AccountSchema);
   Profiles = mongoose.model('Profile', ProfileSchema, 'accounts');
 }
